@@ -1,0 +1,24 @@
+{{%FILTERS}}
+
+<h1>Manage articles</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Published</th>
+        </tr>
+    </thead>
+    <tbody>
+    {{#articles}}
+        <tr>
+            <td><a href="/admin/{{getId}}">{{getName}}</a></td>
+            <td>{{getPublished | date}}</td>
+        </tr>
+    {{/articles}}
+    </tbody>
+</table>
+
+<p>
+    <a href="/admin/create">Create a new article</a>
+</p>

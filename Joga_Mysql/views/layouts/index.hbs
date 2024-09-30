@@ -1,0 +1,11 @@
+{{#if author_page}}
+    <h1>Articles by {{author_name}}</h1>
+{{else}}
+    <h1>All Articles</h1>
+{{/if}}
+
+<ul>
+  {{#each articles}}
+    <li><a href="/article/{{this.slug}}">{{this.name}}</a></li>
+  {{/each}}
+</ul>

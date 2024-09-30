@@ -1,0 +1,20 @@
+<p class="breadcrumbs"><a href="/admin">Admin</a> &raquo;
+    <h1>Create article</h1>
+    
+    {{#article}}
+    <form method="post">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" value="{{getName}}">
+    
+        <label for="slug">Slug</label>
+        <input type="text" name="slug" id="slug" value="{{getSlug}}">
+    
+        <label for="image">Image</label>
+        <input type="text" name="image" id="image" value="{{getImage}}">
+    
+        <label for="body">Body</label>
+        <textarea name="body" id="body">{{{getBody}}}</textarea>
+    
+        <button>Publish</button>
+    </form>
+    {{/article}}
